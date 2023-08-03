@@ -1,0 +1,16 @@
+import { products } from "products"
+
+
+model categories {
+    @@schema("public")
+    id                 Int        @id             @unique @default(autoincrement())
+
+    name               String?
+    slug               String?
+
+    products           products[]
+
+    createdAt          DateTime?  @default(now())
+    updatedAt          DateTime?  @updatedAt
+    actived            Boolean    @default(true)
+}

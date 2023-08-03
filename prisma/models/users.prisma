@@ -1,0 +1,22 @@
+
+model users {
+    @@schema("public")
+    id                 Int       @id             @unique @default(autoincrement())
+    email              String    @unique
+    password           String?
+    token              String?
+
+    fullname           String?
+
+    cart               Json?
+
+    reset              Boolean   @default(false)
+    resetToken         String?
+
+    confirmed          Boolean   @default(false)
+    confirmedToken     String?
+
+    createdAt          DateTime? @default(now())
+    updatedAt          DateTime? @updatedAt
+    actived            Boolean   @default(true)
+}

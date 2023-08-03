@@ -1,0 +1,113 @@
+
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = [ "multiSchema" ]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE")
+    schemas  = [ "public" ]
+}
+
+// models
+
+
+
+model categories {
+    @@schema("public")
+    id                 Int        @id             @unique @default(autoincrement())
+
+    name               String?
+    slug               String?
+
+    products           products[]
+
+    createdAt          DateTime?  @default(now())
+    updatedAt          DateTime?  @updatedAt
+    actived            Boolean    @default(true)
+}
+
+
+
+
+
+
+
+
+
+model media {
+    @@schema("public")
+    id                 Int       @id             @unique @default(autoincrement())
+
+    user_id            Int?
+    name               String?
+    original           String?
+    dir                String?
+    type               String?
+    ext                String?
+    path               String?
+    size               String?
+    compressed         Boolean?  @default(false)
+    base_64            String?
+
+    createdAt          DateTime? @default(now())
+    updatedAt          DateTime? @updatedAt
+    actived            Boolean   @default(true)
+}
+
+
+
+
+
+
+
+
+model orders {
+    @@schema("public")
+    id                 Int       @id             @unique @default(autoincrement())
+
+    createdAt          DateTime? @default(now())
+    updatedAt          DateTime? @updatedAt
+    actived            Boolean   @default(true)
+}
+
+
+model products {
+    @@schema("public")
+    id                 Int         @id               @unique         @default(autoincrement())
+
+    title              String
+    description        String
+    icon               String
+    price              String
+
+    category_id        Int?
+    category           categories? @relation(fields: [category_id],  references:               [id])
+
+    createdAt          DateTime?   @default(now())
+    updatedAt          DateTime?   @updatedAt        @default(now())
+    actived            Boolean     @default(true)
+}
+
+model users {
+    @@schema("public")
+    id                 Int       @id             @unique @default(autoincrement())
+    email              String    @unique
+    password           String?
+    token              String?
+
+    fullname           String?
+
+    cart               Json?
+
+    reset              Boolean   @default(false)
+    resetToken         String?
+
+    confirmed          Boolean   @default(false)
+    confirmedToken     String?
+
+    createdAt          DateTime? @default(now())
+    updatedAt          DateTime? @updatedAt
+    actived            Boolean   @default(true)
+}

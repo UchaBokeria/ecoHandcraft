@@ -1,18 +1,18 @@
 <script>
     import nature from "$lib/assets/offroad.svg"
 </script>
-<div class="bg-white" id="home">
 
-    <section class="bg-[#2ECC40] bg-opacity-10 py-10 sm:py-16 lg:py-24">
+<div class="bg-white" id="home">
+    <section class="bg-[#2ECC40] bg-opacity-10 py-10 sm:py-16 lg:py-10">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
                 <div>
-                    <p class="text-base font-semibold tracking-wider text-[#2ECC40] uppercase">A social media for learners</p>
-                    <h1 class="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl xl:text-8xl">Connect & learn from the experts</h1>
-                    <p class="mt-4 text-base text-black lg:mt-8 sm:text-xl">Grow your career fast with right mentor.</p>
+                    <p class="text-base font-semibold tracking-wider text-[#2ECC40] uppercase">Handcrafting a Greener Tomorrow</p>
+                    <h1 class="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl xl:text-8xl"> Caring for Earth, Crafting for You.</h1>
+                    <p class="mt-4 text-base text-black lg:mt-8 sm:text-xl"> Welcome to our eco handcrafted journey. Let's make the world a better place, one beautifully crafted product at a time.</p>
 
                     <a href="/signup" title="" class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-[#2ECC40] rounded-full lg:mt-16 hover:bg-[#2ECC40] focus:bg-[#2ECC40]" role="button">
-                        Join for free
+                        Join now
                         <svg class="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>

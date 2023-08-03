@@ -1,7 +1,15 @@
 <script lang="ts">
+	import { goto } from "$app/navigation";
+	import { User } from "$lib/shared/store";
     import Logo from "$lib/assets/logo.svg"
+	import { clickOutside } from "$lib/shared/outsideclick";
 
-    const logout = () => {}
+    let dropdown = false
+
+    const logout = () => {
+        User.set(null)
+        goto('/')
+    }
 </script>
 
 <header class="bg-white lg:py-3 ">
@@ -10,7 +18,7 @@
         <nav class="relative flex items-center justify-between h-16 bg-white lg:rounded-md lg:h-24 lg:py-6">
             <div class="flex-shrink-0">
                 <a href="/" title="" class="flex">
-                    <img class="w-auto h-8 lg:h-10" src={Logo} alt="" />
+                    <img class="w-auto h-8 lg:h-[4rem]" src={Logo} alt="" />
                 </a>
             </div>
 
@@ -35,11 +43,52 @@
 
             </div>
 
-            <div class="hidden lg:flex lg:items-center lg:space-x-10">
-                <a href="/signup" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-[#2ECC40] focus:text-[#2ECC40]"> Sign up </a>
+            {#if !$User}
+                <div class="hidden lg:flex lg:items-center lg:space-x-10">
+                    <a href="/signup" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-[#2ECC40] focus:text-[#2ECC40]"> Sign up </a>
 
-                <a href="/signin" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-[#2ECC40] focus:text-[#2ECC40]"> Sign in </a>
-            </div>
+                    <a href="/signin" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-[#2ECC40] focus:text-[#2ECC40]"> Sign in </a>
+                </div>
+            {:else}
+                <div class="hidden lg:flex lg:items-center lg:space-x-10">
+                    <button class="bg-[#2ECC40] hover:bg-[#2d9739] transition duration-300 text-white font-bold rounded w-12 h-12 rounded-full flex items-center justify-center"
+                            on:click={() => dropdown = !dropdown}>
+                        {($User?.fullname?.charAt(0).toUpperCase()) || ' '}
+                    </button>
+                    <!-- <div use:clickOutside={() => dropdown = false} class:hidden={!dropdown} 
+                        class=" origin-top-right absolute top-20 right-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <a href="/cart" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Cart</a>
+                            <a href="/orders" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">My Orders</a>
+                            <a href="/terms" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Terms</a>
+                            <a on:click={logout} href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Log Out</a>
+                        </div>
+                    </div> -->
+                    <div use:clickOutside={() => dropdown = false} class:hidden={!dropdown}  
+                        class="absolute top-20 right-10 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <div>{$User.fullname}</div>
+                            <div class="font-medium truncate">{$User.email}</div>
+                        </div>
+                        <!-- svelte-ignore a11y-click-events-have-key-events -->
+                        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                        <ul on:click={() => dropdown = false} class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                            <li>
+                                <a href="/cart" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cart</a>
+                            </li>
+                            <li>
+                                <a href="/orders" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Orders</a>
+                            </li>
+                            <li>
+                                <a href="/terms" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Terms And Conditions</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a on:click={logout} href="#/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            {/if}
         </nav>
 
         <!-- xs to lg -->

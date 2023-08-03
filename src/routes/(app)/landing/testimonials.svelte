@@ -1,7 +1,8 @@
 <section class="py-10  sm:py-16 lg:py-24 bg-[#2ECC40] bg-opacity-10">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl">Trusted by <span class="text-blue-600">30k+</span> world class companies & design teams</h2>
+            <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl">What Our Customers Say</h2>
+            <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">We're proud of our eco-conscious, handcrafted products, but don't just take our word for it. Hear what our valued customers have to say</p>
         </div>
 
         <div class="grid max-w-xl grid-cols-1 mx-auto mt-8 text-center lg:max-w-full sm:mt-12 lg:mt-20 lg:grid-cols-3 gap-x-6 xl:gap-x-12 gap-y-6">
@@ -18,10 +19,9 @@
                         </div>
                     </div>
                     <blockquote class="mt-7">
-                        <p class="text-lg text-black">“Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat”</p>
+                        <p class="text-lg text-black">“I've never seen such a perfect blend of elegance and eco-consciousness. Every product is a testament to their commitment to sustainable practices without compromising on style. Their handcrafted items are unique, high-quality, and absolutely beautiful. This isn't just shopping, it's a truly enriching experience.”</p>
                     </blockquote>
-                    <p class="text-base font-semibold tex-tblack mt-9">Jenny Wilson</p>
-                    <p class="mt-1 text-base text-gray-600">Project Manager at Microsoft</p>
+                    <p class="text-base font-semibold tex-tblack mt-9">Sarah J.</p> 
                 </div>
             </div>
 
@@ -38,10 +38,9 @@
                         </div>
                     </div>
                     <blockquote class="mt-7">
-                        <p class="text-lg text-black">“Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat”</p>
+                        <p class="text-lg text-black">“It's refreshing to find a company that's genuinely committed to the environment. The team isn't just selling products; they're fostering a community centered on sustainable living. Their products are gorgeous, and you can tell each piece is made with love and respect for our planet.”</p>
                     </blockquote>
-                    <p class="text-base font-semibold tex-tblack mt-9">Robert Fox</p>
-                    <p class="mt-1 text-base text-gray-600">Founder at Brain.co</p>
+                    <p class="text-base font-semibold tex-tblack mt-9">George F.</p>
                 </div>
             </div>
 
@@ -58,10 +57,9 @@
                         </div>
                     </div>
                     <blockquote class="mt-7">
-                        <p class="text-lg text-black">“Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat”</p>
+                        <p class="text-lg text-black">“The quality of products is outstanding. They've managed to marry sustainability and high-end craftsmanship, which is truly remarkable. Every piece tells a story of respect for nature and attention to detail. I wholeheartedly recommend their products to anyone looking to make a positive impact.”</p>
                     </blockquote>
-                    <p class="text-base font-semibold tex-tblack mt-9">Kristin Watson</p>
-                    <p class="mt-1 text-base text-gray-600">UX Designer at Google</p>
+                    <p class="text-base font-semibold tex-tblack mt-9">Kate W.</p>
                 </div>
             </div>
         </div>

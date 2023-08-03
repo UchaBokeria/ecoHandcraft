@@ -1,0 +1,1 @@
+<h1> Documentation will be soon declared </h1>

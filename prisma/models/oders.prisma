@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+model orders {
+    @@schema("public")
+    id                 Int       @id             @unique @default(autoincrement())
+
+    createdAt          DateTime? @default(now())
+    updatedAt          DateTime? @updatedAt
+    actived            Boolean   @default(true)
+}

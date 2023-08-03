@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+model media {
+    @@schema("public")
+    id                 Int       @id             @unique @default(autoincrement())
+
+    user_id            Int?
+    name               String?
+    original           String?
+    dir                String?
+    type               String?
+    ext                String?
+    path               String?
+    size               String?
+    compressed         Boolean?  @default(false)
+    base_64            String?
+
+    createdAt          DateTime? @default(now())
+    updatedAt          DateTime? @updatedAt
+    actived            Boolean   @default(true)
+}

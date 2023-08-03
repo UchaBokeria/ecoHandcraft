@@ -1,14 +1,14 @@
 <script>
-    import Logo from "$lib/assets/logo.png"
+    import Logo from "$lib/assets/logo.svg"
 </script>
 
 <section class="py-10 bg-white sm:pt-16 lg:pt-24">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
             <div class="col-span-2 md:col-span-4 xl:pr-8">
-                <img class="w-auto h-9" src={Logo} alt="" />
+                <img class="h-[200px]" src={Logo} alt="" />
 
-                <p class="text-base leading-relaxed text-gray-600 mt-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                <p class="text-base leading-relaxed text-gray-600 mt-7">We've built our business on the pillars of transparency, responsibility, and the integration of innovative eco-friendly practices. It's not just about doing less harm, it's about doing more good.</p>
 
                 <a href="#" title="" class="inline-flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700 mt-7">
                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -110,7 +110,7 @@
         <hr class="mt-16 mb-10 border-gray-200" />
 
         <div class="sm:flex sm:items-center sm:justify-between">
-            <p class="text-sm text-gray-600">© Copyright 2023, All Rights Reserved by EcoHandCraft</p>
+            <p class="text-sm text-gray-600">© Copyright {new Date().getFullYear()}, All Rights Reserved by EcoHandCraft</p>
 
             <ul class="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
                 <li>
