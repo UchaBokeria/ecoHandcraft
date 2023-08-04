@@ -1,0 +1,1 @@
+import{w as r}from"./index.94a77569.js";const e=window.localStorage.getItem("User")?window.localStorage.getItem("User"):null,o=r(e?JSON.parse(e):null);o.subscribe(t=>window.localStorage.setItem("User",JSON.stringify(t)));export{o as U};

@@ -1,0 +1,65 @@
+{
+	"/(auth)": [
+		"src/routes/(auth)/+layout.server.ts"
+	],
+	"/(app)": [
+		"src/routes/(app)/+page.ts"
+	],
+	"/": [],
+	"/(app)/about": [],
+	"/admin": [
+		"src/routes/admin/+page.server.ts"
+	],
+	"/admin/dashboard": [],
+	"/admin/orders": [],
+	"/admin/payments": [],
+	"/admin/products": [],
+	"/admin/reports": [],
+	"/admin/settings": [],
+	"/api": [],
+	"/api/auth/changePassword/[email]/[resetToken]": [
+		"src/routes/api/auth/changePassword/[email]/[resetToken]/+server.ts"
+	],
+	"/api/auth/confirm/[email]/[confirmedToken]": [
+		"src/routes/api/auth/confirm/[email]/[confirmedToken]/+server.ts"
+	],
+	"/api/auth/reset/[email]": [
+		"src/routes/api/auth/reset/[email]/+server.ts"
+	],
+	"/api/auth/signin": [
+		"src/routes/api/auth/signin/+server.ts"
+	],
+	"/api/auth/signup": [
+		"src/routes/api/auth/signup/+server.ts"
+	],
+	"/api/orders": [
+		"src/routes/api/orders/+server.ts"
+	],
+	"/api/payments": [
+		"src/routes/api/payments/+server.ts"
+	],
+	"/api/products": [
+		"src/routes/api/products/+server.ts"
+	],
+	"/(app)/cart": [],
+	"/(auth)/changePassword/[email]/[resetToken]": [
+		"src/routes/(auth)/+layout.server.ts"
+	],
+	"/(app)/contact": [],
+	"/(app)/deilvery": [],
+	"/(app)/orders": [],
+	"/(app)/products": [
+		"src/routes/(app)/products/+page.server.ts"
+	],
+	"/(app)/products/[id]": [],
+	"/(auth)/reset": [
+		"src/routes/(auth)/+layout.server.ts"
+	],
+	"/(auth)/signin": [
+		"src/routes/(auth)/+layout.server.ts"
+	],
+	"/(auth)/signup": [
+		"src/routes/(auth)/+layout.server.ts"
+	],
+	"/(app)/terms": []
+}
