@@ -15,7 +15,7 @@
 		"test:unit": "vitest",
 		"prisma:refresh": "npx prisma validate && npx prisma generate",
 		"prisma:studio": "npm run prisma:refresh && npx prisma studio",
-		"prisma:build": "ts-node-esm src/lib/utils/prisma-tools/prisma-import.ts",
+		"prisma:build": "ts-node-esm src/lib/utils/prisma-tools/prisma-import.ts ",
 		"prisma:deploy": "npm run prisma:build && npx prisma db pull && npm run prisma:refresh",
 		"prisma": "npm run prisma:build && npm run prisma:refresh && npx prisma db push"
 	},
