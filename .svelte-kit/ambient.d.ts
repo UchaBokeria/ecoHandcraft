@@ -33,6 +33,13 @@ declare module '$env/static/private' {
 	export const DB_NAME: string;
 	export const DB_LIMIT: string;
 	export const DB_SCHEMAS: string;
+	export const POSTGRES_URL: string;
+	export const POSTGRES_PRISMA_URL: string;
+	export const POSTGRES_URL_NON_POOLING: string;
+	export const POSTGRES_USER: string;
+	export const POSTGRES_HOST: string;
+	export const POSTGRES_PASSWORD: string;
+	export const POSTGRES_DATABASE: string;
 	export const DATABASE: string;
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
@@ -157,6 +164,13 @@ declare module '$env/dynamic/private' {
 		DB_NAME: string;
 		DB_LIMIT: string;
 		DB_SCHEMAS: string;
+		POSTGRES_URL: string;
+		POSTGRES_PRISMA_URL: string;
+		POSTGRES_URL_NON_POOLING: string;
+		POSTGRES_USER: string;
+		POSTGRES_HOST: string;
+		POSTGRES_PASSWORD: string;
+		POSTGRES_DATABASE: string;
 		DATABASE: string;
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
